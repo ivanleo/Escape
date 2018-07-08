@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI
+  m_EditorData:
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingParameters:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: f2ac1e92c6dfb9847bd8077578a8e1d1, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: adbea1d7ec4965d458e63d51329c5eaa, type: 3}
+  - {fileID: 21300000, guid: 3dbae702f2e904d4b9b76145a7cd82fe, type: 3}
+  - {fileID: 21300000, guid: 53445a79d400de1479b5eff293ed4d24, type: 3}
+  - {fileID: 21300000, guid: 703928c22b93fc04cadb6722bd99baa5, type: 3}
+  - {fileID: 21300000, guid: 9ee33261aa0178c4f89a6a894d69be7a, type: 3}
+  - {fileID: 21300000, guid: 2a68e621b1e733b4e8dfef4d75de60e4, type: 3}
+  - {fileID: 21300000, guid: 71d0f70458647f94987cd62c8567b0e8, type: 3}
+  - {fileID: 21300000, guid: 0a7cd9167e76ad84491b54eb19afaefd, type: 3}
+  - {fileID: 21300000, guid: 80544d94d579c204a93454e2a5039f62, type: 3}
+  - {fileID: 21300000, guid: 4bbd26f1c48215545b8faada22aac792, type: 3}
+  - {fileID: 21300000, guid: ab66ae30e586e684eb16034a791b7506, type: 3}
+  - {fileID: 21300000, guid: cb33ba057589e2241b6f5512d2f434c0, type: 3}
+  - {fileID: 21300000, guid: cbdb8d4b307e7374e9341acfc46693c2, type: 3}
+  - {fileID: 21300000, guid: b3d092518019ab141a7f9eef5615e8aa, type: 3}
+  - {fileID: 21300000, guid: 01ca3af7d15d055458b150a38042cde3, type: 3}
+  - {fileID: 21300000, guid: b89d451056c7baa4788fdd2644fdb89b, type: 3}
+  - {fileID: 21300000, guid: 5314eaa5d46e67944b10881a0e6a4f49, type: 3}
+  - {fileID: 21300000, guid: 225a6c2a12aece3479739185fb5d1aa4, type: 3}
+  - {fileID: 21300000, guid: ac1531200fe028e4a85d7d77b7c59f66, type: 3}
+  - {fileID: 21300000, guid: bf343dc1de2329e4481ea7e7eb521db4, type: 3}
+  - {fileID: 21300000, guid: 467ef2e9857ef0541864197c2edf0adb, type: 3}
+  - {fileID: 21300000, guid: 9abbb8261585b7a46a1165ffd696f9da, type: 3}
+  - {fileID: 21300000, guid: 2ea2eeca869e9254fb9cb14890010f7f, type: 3}
+  - {fileID: 21300000, guid: c28608c205f3b9340b40cc32bbe4f2a1, type: 3}
+  - {fileID: 21300000, guid: 23f4c10c4ce5f7a4d80f12de622924f1, type: 3}
+  - {fileID: 21300000, guid: e62b723b23e6ff84fb1c27b7d3b4d489, type: 3}
+  - {fileID: 21300000, guid: eb3e80ed69647454bbf27b2e1d5b6e9b, type: 3}
+  - {fileID: 21300000, guid: c263509acdf5e0042b81fe3e7f9f357d, type: 3}
+  - {fileID: 21300000, guid: 7c60fa0864751cb46aada8a7445b86dd, type: 3}
+  - {fileID: 21300000, guid: e2bb546c86c869f408b7598a7891a5ba, type: 3}
+  - {fileID: 21300000, guid: f191896122252014f95ec2192453be7e, type: 3}
+  - {fileID: 21300000, guid: 7695126b51caf164dbd5162d091a6779, type: 3}
+  - {fileID: 21300000, guid: 5acb0b1e128dae74da475495b5b438c1, type: 3}
+  - {fileID: 21300000, guid: 871a4b7769b59e94a9a54c808e71fd24, type: 3}
+  - {fileID: 21300000, guid: c34c4095abb5b9b4994fec2cda9a998b, type: 3}
+  - {fileID: 21300000, guid: 49f07acbc8108a341adb43b7ec81a208, type: 3}
+  - {fileID: 21300000, guid: a37a6930c8e7b2b49ad0ae5d1a338d0c, type: 3}
+  - {fileID: 21300000, guid: 43508b9a144b80c43b470730bc296152, type: 3}
+  - {fileID: 21300000, guid: f859ea10afbcb904caa356d6ec2e043d, type: 3}
+  - {fileID: 21300000, guid: f15d4d57fafb6bb4fb1fb2b54f3ab0ae, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - img_Back
+  - img_Panel
+  - img_Banner
+  - img_Title
+  - btn_DoubleGame_1
+  - btn_DoubleGame_2
+  - btn_Intru
+  - btn_Intru_2
+  - btn_SingleGame_2
+  - btn_SingleGame_1
+  - img_LOGO
+  - "\u94C3\u7A7A"
+  - "\u7ED3\u675F"
+  - 2p
+  - 1p
+  - img_Texture
+  - btn_Down_1
+  - btn_Down_2
+  - btn_A_1
+  - btn_A_2
+  - btn_Left_2
+  - btn_Left_1
+  - btn_Up_2
+  - btn_Up_1
+  - btn_S_2
+  - btn_S_1
+  - btn_Right_2
+  - btn_Right_1
+  - btn_D_1
+  - btn_W_2
+  - btn_D_2
+  - btn_W_1
+  - txt_Click_To_Relife
+  - txt_Hold_ToRelife
+  - txt_MoveLeft
+  - txt_MoveRight
+  - txt_AnyKey
+  - txt_Jump
+  - txt_Help
+  - txt_AddPower
+  m_Tag: UI
+  m_IsVariant: 0
