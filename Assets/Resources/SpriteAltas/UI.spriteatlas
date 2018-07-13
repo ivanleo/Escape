@@ -33,6 +33,8 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: adbea1d7ec4965d458e63d51329c5eaa, type: 3}
+  - {fileID: 21300000, guid: 1939892fdff27ca4f87eae9440154dc2, type: 3}
+  - {fileID: 21300000, guid: 1e3a9b81604298a4b902d1f2f6840a95, type: 3}
   - {fileID: 21300000, guid: 3dbae702f2e904d4b9b76145a7cd82fe, type: 3}
   - {fileID: 21300000, guid: 53445a79d400de1479b5eff293ed4d24, type: 3}
   - {fileID: 21300000, guid: 703928c22b93fc04cadb6722bd99baa5, type: 3}
@@ -74,6 +76,8 @@ SpriteAtlas:
   - {fileID: 21300000, guid: f15d4d57fafb6bb4fb1fb2b54f3ab0ae, type: 3}
   m_PackedSpriteNamesToIndex:
   - img_Back
+  - img_Man
+  - img_Woman4
   - img_Panel
   - img_Banner
   - img_Title
@@ -84,8 +88,8 @@ SpriteAtlas:
   - btn_SingleGame_2
   - btn_SingleGame_1
   - img_LOGO
-  - "\u94C3\u7A7A"
-  - "\u7ED3\u675F"
+  - Img_Nekcom
+  - txt_end
   - 2p
   - 1p
   - img_Texture

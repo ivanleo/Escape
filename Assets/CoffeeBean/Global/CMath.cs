@@ -3,7 +3,8 @@ using UnityEngine;
 /// <summary>
 /// 数学库
 /// </summary>
-namespace CoffeeBean {
+namespace CoffeeBean
+{
     /// <summary>
     /// 数学类
     /// </summary>
@@ -15,14 +16,14 @@ namespace CoffeeBean {
         /// <param name="max">最大数</param>
         /// <param name="min">最小数,默认为0</param>
         /// <returns>随机数</returns>
-        public static int Rand ( int max, int min = 0 )
+        public static int Rand( int max, int min = 0 )
         {
-            if ( min > max )
+            if ( max < min )
             {
-                return Random.Range ( max, min );
+                return Random.Range( max, min );
             }
 
-            return Random.Range ( min, max );
+            return Random.Range( min, max );
         }
 
         /// <summary>
@@ -40,14 +41,14 @@ namespace CoffeeBean {
         /// <param name="max">最大数</param>
         /// <param name="min">最小数,默认为0</param>
         /// <returns></returns>
-        public static float Rand ( float max, float min = 0 )
+        public static float Rand( float max, float min = 0 )
         {
-            if ( min > max )
+            if ( max < min )
             {
-                return Random.Range ( max, min );
+                return Random.Range( max, min );
             }
 
-            return Random.Range ( min, max );
+            return Random.Range( min, max );
         }
 
 
@@ -58,18 +59,16 @@ namespace CoffeeBean {
         /// <param name="Min">最小范围</param>
         /// <param name="Max">最大范围</param>
         /// <returns></returns>
-        public static float Clamp ( float Num, float Min, float Max )
+        public static float Clamp( float Num, float Min, float Max )
         {
             if ( Num < Min )
             {
                 return Min;
             }
-
             if ( Num > Max )
             {
                 return Max;
             }
-
             return Num;
         }
 
@@ -80,18 +79,16 @@ namespace CoffeeBean {
         /// <param name="Min">最小范围</param>
         /// <param name="Max">最大范围</param>
         /// <returns></returns>
-        public static int Clamp ( int Num, int Min, int Max )
+        public static int Clamp( int Num, int Min, int Max )
         {
             if ( Num < Min )
             {
                 return Min;
             }
-
             if ( Num > Max )
             {
                 return Max;
             }
-
             return Num;
         }
 
@@ -99,7 +96,7 @@ namespace CoffeeBean {
         /// 让一个角度标准化  归入 [0,360) 度之间
         /// </summary>
         /// <param name="Angle">角度</param>
-        public static float MakeAngleNormalize ( float Angle )
+        public static float MakeAngleNormalize( float Angle )
         {
             while ( Angle >= 360 )
             {
@@ -115,13 +112,47 @@ namespace CoffeeBean {
         }
 
         /// <summary>
+        /// 把一个数字从当前的 min,max区间缩放到 newMin , newMax区间
+        /// </summary>
+        /// <param name="Num"></param>
+        /// <param name="min"></param>
+        /// <param name="max"></param>
+        /// <param name="newMin"></param>
+        /// <param name="newMax"></param>
+        /// <returns></returns>
+        public static float ReMap( float num, float min, float max, float newMin, float newMax )
+        {
+            if ( num <= min ) { return newMin; }
+            if ( num >= max ) { return newMax; }
+
+            return ( num - min ) / ( max - min ) * ( newMax - newMin ) + newMin;
+        }
+
+        /// <summary>
+        /// 把一个数字从当前的 min,max区间缩放到 newMin , newMax区间
+        /// </summary>
+        /// <param name="Num"></param>
+        /// <param name="min"></param>
+        /// <param name="max"></param>
+        /// <param name="newMin"></param>
+        /// <param name="newMax"></param>
+        /// <returns></returns>
+        public static int ReMap( int num, int min, int max, int newMin, int newMax )
+        {
+            if ( num <= min ) { return newMin; }
+            if ( num >= max ) { return newMax; }
+
+            return ( num - min ) / ( max - min ) * ( newMax - newMin ) + newMin;
+        }
+
+        /// <summary>
         /// 得到一个概率是否命中
         /// </summary>
         /// <param name="Ratio">概率</param>
         /// <returns></returns>
-        public static bool CanRatioBingo ( int Ratio, EPrecentType precentType = EPrecentType.PRECENT_10000 )
+        public static bool CanRatioBingo( int Ratio, EPrecentType precentType = EPrecentType.PRECENT_10000 )
         {
-            return UnityEngine.Random.Range ( 0, ( int ) precentType ) <= Ratio;
+            return UnityEngine.Random.Range( 0, ( int )precentType ) <= Ratio;
         }
 
         /// <summary>
@@ -129,11 +160,11 @@ namespace CoffeeBean {
         /// </summary>
         /// <typeparam name="T">泛型</typeparam>
         /// <param name="array">泛型数组引用</param>
-        public static void Shuffle<T> ( ref T[] array )
+        public static void Shuffle<T>( ref T[] array )
         {
             for ( int i = 0 ; i < array.Length ; ++i )
             {
-                int TargetPos = Rand ( array.Length );
+                int TargetPos = Rand( array.Length );
                 T temp = array[i];
                 array[i] = array[TargetPos];
                 array[TargetPos] = temp;
@@ -145,11 +176,11 @@ namespace CoffeeBean {
         /// </summary>
         /// <typeparam name="T">泛型</typeparam>
         /// <param name="List">泛型List引用</param>
-        public static void Shuffle<T> ( ref List<T> list )
+        public static void Shuffle<T>( ref List<T> list )
         {
             for ( int i = 0 ; i < list.Count ; ++i )
             {
-                int TargetPos = Rand ( list.Count );
+                int TargetPos = Rand( list.Count );
                 T temp = list[i];
                 list[i] = list[TargetPos];
                 list[TargetPos] = temp;

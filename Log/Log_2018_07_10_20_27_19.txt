@@ -1,0 +1,2 @@
+log system actived!
+[2018-07-10 20:27:25.379 | Info    ] ready to load scene 02_Main immediate

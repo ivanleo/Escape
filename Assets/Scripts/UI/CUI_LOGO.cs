@@ -7,7 +7,7 @@ using UnityEngine;
 /// <summary>
 /// LOGO界面
 /// </summary>
-[CAttrUIBind ( PrefabName = "UI_LOGO", IsSigleton = true, Description = "LOGO界面" )]
+[CUIInfo ( PrefabName = "UI_LOGO", IsSigleton = true, IsAnimationUI = true, Description = "LOGO界面" )]
 public class CUI_LOGO: CUIBase<CUI_LOGO>
 {
     /// <summary>
@@ -34,8 +34,6 @@ public class CUI_LOGO: CUIBase<CUI_LOGO>
     /// </summary>
     private IEnumerator Start()
     {
-        m_LOGO.SetAlpha ( 0f );
-        m_LOGO.rectTransform.FadeInUINode ( 0.5f );
         yield return new WaitForSeconds ( 1.5f );
         m_BackImage.DOColor ( Color.white, 1f );
 
@@ -45,7 +43,7 @@ public class CUI_LOGO: CUIBase<CUI_LOGO>
 
         yield return new WaitForSeconds ( 1f );
 
-        CSceneManager.Instance.ChangeSceneImmediately ( "Main" );
+        CSceneManager.Instance.ChangeSceneImmediately ( "02_Main" );
     }
 }
 

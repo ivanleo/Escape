@@ -28,19 +28,19 @@ namespace CoffeeBean
         /// <summary>
         /// 得到当前时间戳
         /// </summary>
-        /// <param name="needseconds">为真获取秒时间戳，为假获取毫秒时间戳</param>
+        /// <param name="needMilliSeconds">是否获取豪秒时间戳</param>
         /// <returns></returns>
-        public static long GetNowTimeStamp( bool needseconds = true )
+        public static long GetNowTimeStamp( bool needMilliSeconds = false )
         {
             TimeSpan ts = DateTime.UtcNow - new DateTime( 1970, 1, 1, 0, 0, 0, 0 );
             long ret;
-            if ( needseconds )
+            if ( needMilliSeconds )
             {
-                ret = Convert.ToInt64( ts.TotalSeconds );
+                ret = Convert.ToInt64( ts.TotalMilliseconds );
             }
             else
             {
-                ret = Convert.ToInt64( ts.TotalMilliseconds );
+                ret = Convert.ToInt64( ts.TotalSeconds );
             }
             return ret;
         }

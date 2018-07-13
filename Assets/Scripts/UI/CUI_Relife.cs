@@ -9,7 +9,7 @@ using DG;
 /// <summary>
 /// 复活界面
 /// </summary>
-[CAttrUIBind ( PrefabName = "UI_Relife", IsSigleton = true, Description = "复活界面" )]
+[CUIInfo ( PrefabName = "UI_Relife", IsSigleton = true, IsAnimationUI = true, Description = "复活界面" )]
 public class CUI_Relife : CUIBase<CUI_Relife>
 {
     private Image m_Progress = null;

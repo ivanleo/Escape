@@ -55,10 +55,6 @@ namespace CoffeeBean
         /// </summary>
         public Vector3 m_LocalScale;
 
-        /// <summary>
-        /// 精灵图名
-        /// </summary>
-        public string m_SpName;
     }
 
 }

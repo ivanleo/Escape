@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
-
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 namespace CoffeeBean {
     /// <summary>
     /// 应用程序状态
@@ -114,6 +116,25 @@ namespace CoffeeBean {
                 }
             }
         }
-    }
 
+        /// <summary>
+        /// 退出
+        /// </summary>
+        public void Exit()
+        {
+            CLOG.I ( "End Game" );
+
+#if UNITY_EDITOR
+
+            if ( Application.platform == RuntimePlatform.WindowsEditor )
+            {
+                EditorApplication.isPlaying = false;
+                return;
+            }
+
+#endif
+
+            Application.Quit();
+        }
+    }
 }

@@ -51,7 +51,6 @@ namespace CoffeeBean {
                 return;
             }
 
-
             switch ( Application.platform )
             {
                 //安卓下输出到持久化目录

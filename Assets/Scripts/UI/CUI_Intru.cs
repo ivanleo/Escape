@@ -7,22 +7,18 @@ using UnityEngine;
 /// <summary>
 /// 介绍界面
 /// </summary>
-[CAttrUIBind ( PrefabName = "UI_Intru", IsSigleton = true, Description = "介绍界面" )]
+[CUIInfo ( PrefabName = "UI_Intru", IsSigleton = true, IsAnimationUI = true, Description = "介绍界面" )]
 public class CUI_Intru : CUIBase<CUI_Intru>
 {
-    private IEnumerator Start()
-    {
-        ( transform as RectTransform ).FadeInUINode ( 0.5f );
-        yield return new WaitForSeconds ( 10f );
-        ( transform as RectTransform ).FadeOutUINode ( 1f, () => { DestroyUI(); } );
-    }
+    private float m_NowPassTime = 0f;
 
     private void Update()
     {
-        if ( Input.anyKeyDown )
+        m_NowPassTime += Time.deltaTime;
+
+        if ( Input.anyKeyDown || m_NowPassTime > 12f )
         {
-            StopAllCoroutines();
-            ( transform as RectTransform ).FadeOutUINode ( 1f, () => { DestroyUI(); } );
+            DestroyUI();
         }
     }
 

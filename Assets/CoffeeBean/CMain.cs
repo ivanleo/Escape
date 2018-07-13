@@ -28,6 +28,9 @@ namespace CoffeeBean {
             //启动帧率
             CFPS.Instance.Begin();
 #endif
+            //缓存配置
+            CConfig.CacheConfigs();
+
             //缓存预制体
             CPrefabManager.Instance.CacheAllPrefab();
 

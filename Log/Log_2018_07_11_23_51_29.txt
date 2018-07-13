@@ -1,0 +1,2 @@
+log system actived!
+Init 场景切换工具 Successful!

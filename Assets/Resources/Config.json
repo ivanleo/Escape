@@ -1,0 +1,8 @@
+{
+	"destory_inteval":2,
+	"move_in_inteval_min":3,
+	"move_in_inteval_max":10,
+	"move_in_wait_min":2,
+	"move_in_wait_max":5,
+	"jump_height":2
+}

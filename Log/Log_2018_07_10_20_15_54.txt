@@ -1,0 +1,10 @@
+log system actived!
+[2018-07-10 20:16:30.527 | Info    ] ready to load scene Game immediate
+Scene 'Game' couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+---------------[ Stack ]---------------
+UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode)
+CoffeeBean.CSceneManager:ChangeSceneImmediately(String) (at Assets/CoffeeBean/Core/CSceneManager.cs:36)
+<DelayTOGame>c__Iterator0:MoveNext() (at Assets/Scripts/UI/CUI_Main.cs:103)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+

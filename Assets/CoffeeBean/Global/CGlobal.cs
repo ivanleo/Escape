@@ -19,6 +19,5 @@ namespace CoffeeBean {
     public class CGlobal : CSingleton<CGlobal>, IMsgSender
     {
 
-
     }
 }

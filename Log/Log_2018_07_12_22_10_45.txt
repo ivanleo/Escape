@@ -1,0 +1,11 @@
+log system actived!
+NullReferenceException: Object reference not set to an instance of an object
+---------------[ Stack ]---------------
+CConfig.GetValue (System.String key) (at Assets/Scripts/CConfig.cs:31)
+CGame+<GridClose>c__Iterator0.MoveNext () (at Assets/Scripts/CGame.cs:144)
+UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+CoffeeBean.CCoroutineManager:RunCoroutine(IEnumerator) (at Assets/CoffeeBean/Core/CCoroutineManager.cs:31)
+CGame:StartGridClose() (at Assets/Scripts/CGame.cs:135)
+Init_Game:Start() (at Assets/Scripts/Init_Game.cs:17)
+

@@ -7,7 +7,7 @@ using UnityEngine;
 /// <summary>
 /// "
 /// </summary>
-[CAttrUIBind ( PrefabName = "UI_Result", IsSigleton = true, Description = "结束界面" )]
+[CUIInfo ( PrefabName = "UI_Result", IsSigleton = true, IsAnimationUI = true, Description = "结束界面" )]
 public class CUI_Result : CUIBase<CUI_Result>
 {
     private Image m_Back = null;

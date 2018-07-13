@@ -7,7 +7,7 @@ using UnityEngine;
 /// <summary>
 /// 游戏界面
 /// </summary>
-[CAttrUIBind ( PrefabName = "UI_Game", IsSigleton = true, Description = "游戏界面" )]
+[CUIInfo ( PrefabName = "UI_Game", IsSigleton = true, IsAnimationUI = false, Description = "游戏界面" )]
 public class CUI_Game : CUIBase<CUI_Game>
 {
     private Text m_Time = null;
@@ -22,6 +22,8 @@ public class CUI_Game : CUIBase<CUI_Game>
         m_Time = transform.FindChildComponent<Text> ( "txt_Time" );
 
         m_HintRoot = transform.FindChildComponent<Image> ( "img_Hint" );
+
+
 
     }
 

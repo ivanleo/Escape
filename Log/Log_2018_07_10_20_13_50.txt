@@ -1,0 +1,10 @@
+log system actived!
+[2018-07-10 20:13:56.590 | Info    ] ready to load scene Main immediate
+Scene 'Main' couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+---------------[ Stack ]---------------
+UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode)
+CoffeeBean.CSceneManager:ChangeSceneImmediately(String) (at Assets/CoffeeBean/Core/CSceneManager.cs:36)
+<Start>c__Iterator0:MoveNext() (at Assets/Scripts/UI/CUI_LOGO.cs:48)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+
