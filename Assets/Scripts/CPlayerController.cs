@@ -94,19 +94,30 @@ public class CPlayerController : MonoBehaviour
     /// </summary>
     private bool isInDeadArea = false;
 
-    //玩家编号
+    /// <summary>
+    /// 玩家编号
+    /// </summary>
     [SerializeField]
     private int m_PlayerID = 1;
 
     /// <summary>
+    /// 身体碰撞区
+    /// </summary>
+    private CapsuleCollider m_CapCollider = null;
+
+    /// <summary>
     /// 死亡区域
     /// </summary>
-    public SphereCollider m_DeadArea = null;
+    private SphereCollider m_DeadArea = null;
 
-    //动画控制器
+    /// <summary>
+    /// 动画控制器
+    /// </summary>
     private Animator m_AT = null;
 
-    //刚体
+    /// <summary>
+    /// 刚体
+    /// </summary>
     private Rigidbody m_Body = null;
 
     /// <summary>
@@ -169,6 +180,8 @@ public class CPlayerController : MonoBehaviour
         m_DeadArea = GetComponent<SphereCollider>();
         m_DeadArea.enabled = false;
 
+        m_CapCollider = GetComponent<CapsuleCollider>();
+
         m_AT = GetComponentInChildren<Animator>();
         m_Body = GetComponent<Rigidbody>();
 
@@ -201,7 +214,6 @@ public class CPlayerController : MonoBehaviour
         if ( CheckDead() )
         {
             //死了
-
             //播放死亡音效
             CSoundManager.Instance.PlayEffect ( "fail" );
             //淡出背景音乐
@@ -214,69 +226,20 @@ public class CPlayerController : MonoBehaviour
         }
 
         //输入轴
-        float HInput = m_PlayerID == 1 ? Input.GetAxis ( "Horizontal" ) : Input.GetAxis ( "Horzontal2p" );
+        float HInput = m_PlayerID == 1 ? Input.GetAxisRaw ( "Horizontal" ) : Input.GetAxisRaw ( "Horzontal2p" );
 
+        //处理旋转
+        HandlerDirection ( HInput );
+
+        //处理水平移动和是否在地面的状态修改
         if ( m_IsOnGround )
         {
-            HandlerGroundMoving ( HInput )
+            HandlerGroundMoving ( HInput );
         }
         else
         {
             HandlerAirMoving ( HInput );
         }
-
-        if ( CheckIsInAir() )
-        {
-            ratio = 0.3f;
-            m_Body.drag = 0.3f;
-
-            if ( m_FootPar.isPlaying )
-            { m_FootPar.Stop(); }
-        }
-        else
-        {
-            ratio = 1f;
-            m_Body.drag = 0.05f;
-
-            if ( !m_FootPar.isPlaying )
-            { m_FootPar.Play(); }
-        }
-
-
-        if ( HInput > 0 )
-        {
-            //向前移动
-            m_AT.SetInteger ( "AnimIndex", ( int ) EActionType.NORMAL_RUN );
-            m_Body.AddForce ( Vector3.right * m_MoveForce * ratio );
-
-            if ( m_Dir == EDirection.BACK )
-            {
-                transform.DOKill();
-                //转到前方
-                transform.DORotate ( new Vector3 ( 0f, 90f, 0f ), m_TurnTime );
-                m_Dir = EDirection.FORWARD;
-            }
-        }
-        else if ( HInput < 0 )
-        {
-            //向后移动
-            m_AT.SetInteger ( "AnimIndex", ( int ) EActionType.NORMAL_RUN );
-            m_Body.AddForce ( Vector3.left * m_MoveForce * ratio );
-
-            if ( m_Dir == EDirection.FORWARD )
-            {
-                transform.DOKill();
-                //转到后方
-                transform.DORotate ( new Vector3 ( 0f, 270f, 0f ), m_TurnTime, RotateMode.FastBeyond360 );
-                m_Dir = EDirection.BACK;
-            }
-        }
-        else
-        {
-            m_AT.SetInteger ( "AnimIndex", ( int ) EActionType.NORMAL_STAND );
-        }
-
-
 
         if ( m_Body.velocity.x > 9 )
         {
@@ -293,7 +256,7 @@ public class CPlayerController : MonoBehaviour
         }
 
         //检查是否需要创建新的盒子
-        CCubeManager.Instance.CheckCreateGrid ( transform.position.x );
+        //CCubeManager.Instance.CheckCreateGrid ( transform.position.x );
 
         //Debug.Log ( m_Body.velocity );
     }
@@ -306,9 +269,71 @@ public class CPlayerController : MonoBehaviour
     private void HandlerAirMoving ( float hInput )
     {
         //添加水平力
-        m_Body.AddForce ( Vector3.right * m_MoveForce * 0.3f );
+        m_Body.AddForce ( Vector3.right * m_MoveForce * 0.3f * hInput );
 
         //检查是否落地
+        CheckOnLand();
+    }
+
+    /// <summary>
+    /// 检查是否落地
+    /// </summary>
+    private void CheckOnLand()
+    {
+        float Length = m_Body.velocity.y > 0 ? 0.01f : 0.1f;
+        Ray ry = new Ray ( transform.position, Vector3.down );
+
+        RaycastHit ryHit;
+
+        if ( Physics.Raycast ( ry, out ryHit, Length, LayerMask.GetMask ( "FloorCube" ) ) )
+        {
+            m_IsOnGround = true;
+
+            //TODO 播放落地烟尘
+        }
+        else
+        {
+            m_IsOnGround = false;
+        }
+    }
+
+    /// <summary>
+    /// 处理方向
+    /// </summary>
+    private void HandlerDirection ( float HInput )
+    {
+        if ( HInput > 0 )
+        {
+            //向前移动
+            m_AT.SetInteger ( "AnimIndex", ( int ) EActionType.NORMAL_RUN );
+
+            if ( m_Dir == EDirection.BACK )
+            {
+                transform.DOKill();
+                //转到前方
+                transform.DORotate ( new Vector3 ( 0f, 90f, 0f ), m_TurnTime );
+                m_Dir = EDirection.FORWARD;
+            }
+        }
+        else if ( HInput < 0 )
+        {
+            //向后移动
+            m_AT.SetInteger ( "AnimIndex", ( int ) EActionType.NORMAL_RUN );
+
+            if ( m_Dir == EDirection.FORWARD )
+            {
+                transform.DOKill();
+                //转到后方
+                transform.DORotate ( new Vector3 ( 0f, 270f, 0f ), m_TurnTime, RotateMode.FastBeyond360 );
+                m_Dir = EDirection.BACK;
+            }
+        }
+        else
+        {
+            m_AT.SetInteger ( "AnimIndex", ( int ) EActionType.NORMAL_STAND );
+        }
+
+
     }
 
     /// <summary>
@@ -324,7 +349,7 @@ public class CPlayerController : MonoBehaviour
         }
 
         //添加水平力
-        m_Body.AddForce ( Vector3.right * m_MoveForce  );
+        m_Body.AddForce ( Vector3.right * m_MoveForce * hInput  );
     }
 
     /// <summary>
@@ -344,55 +369,39 @@ public class CPlayerController : MonoBehaviour
         CGame.Instance.JumpCount++;
     }
 
-    ///// <summary>
-    ///// 检查是否死亡
-    ///// </summary>
-    ///// <returns></returns>
-    //private bool CheckDead()
-    //{
-    //    Ray ry = new Ray ( CheckPoint.position + Vector3.back * 5, Vector3.forward );
-    //    RaycastHit ryHIt;
+    /// <summary>
+    /// 检查是否死亡
+    /// </summary>
+    /// <returns></returns>
+    private bool CheckDead()
+    {
 
-    //    if ( Physics.Raycast ( ry, out ryHIt, 10f, LayerMask.GetMask ( "Upper" ) ) )
-    //    {
-    //        if ( !ryHIt.transform.parent.GetComponent<CCubeController>().IsSafe )
-    //        {
-    //            CParticleManager.PlayHit ( ryHIt.point + Vector3.back * 1f );
-    //            m_FootPar.Stop();
+        Ray ry = new Ray ( transform.position + m_CapCollider.height * Vector3.up, Vector3.up );
+        RaycastHit ryHIt;
 
-    //            if ( CGame.Instance.PlayMode == 1 )
-    //            {
-    //                CGame.Instance.DeadCount++;
-    //                CUI_Relife.CreateUI();
-    //            }
-    //            else
-    //            {
-    //                //双人模式下死亡
-    //                CGame.Instance.NowDeadCount++;
-    //                CGame.Instance.DeadCount++;
-    //                Debug.Log ( CGame.Instance.NowDeadCount );
+        if ( Physics.Raycast ( ry, out ryHIt, 0.3f, LayerMask.GetMask ( "UpperCube" ) ) )
+        {
+            if ( !ryHIt.transform.GetComponent<CCube>().IsSafe )
+            {
+                var GameRef = CGame.Instance;
 
-    //                m_DeadArea.enabled = true;
-    //                m_Body.isKinematic = true;
-    //                var Par = CParticleManager.PlayNeedHelp ( transform.position );
-    //                Par.transform.SetParent ( transform );
+                if ( GameRef.PlayMode == EPlayMode.PLAY_SINGLE )
+                {
+                    GameRef.DeadCount++;
+                    CUI_Relife.CreateUI();
+                }
+                else
+                {
+                    //双人模式下死亡
+                    GameRef.DeadCount++;
+                }
 
-    //                CGame.Instance.DeadPeople = this;
+                return true;
+            }
+        }
 
-    //            }
-
-    //            return true;
-    //        }
-    //        else
-    //        {
-    //            return false;
-    //        }
-    //    }
-    //    else
-    //    {
-    //        return false;
-    //    }
-    //}
+        return false;
+    }
 
     //private void OnCollisionEnter ( Collision collision )
     //{

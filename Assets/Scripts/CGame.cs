@@ -43,7 +43,7 @@ public class CGame: CSingleton<CGame>
     /// <summary>
     /// 游戏模式
     /// </summary>
-    private EPlayMode PlayMode { get; set; }
+    public EPlayMode PlayMode { get; private set; }
 
     /// <summary>
     /// 管理的格子
@@ -54,6 +54,20 @@ public class CGame: CSingleton<CGame>
     /// 跳跃次数
     /// </summary>
     public int JumpCount { get;  set; }
+
+    /// <summary>
+    /// 死亡次数
+    /// </summary>
+    public int DeadCount { get; set; }
+
+
+    /// <summary>
+    /// 站起次数
+    /// </summary>
+    public int StandCount { get; set; }
+
+
+
 
     /// <summary>
     /// 当前格子序号
@@ -235,6 +249,9 @@ public class CGame: CSingleton<CGame>
         SGrid grid = new SGrid();
         GameObject Upper = CreateCube();
         GameObject Downer = CreateCube();
+
+        Upper.layer = LayerMask.NameToLayer ( "UpperCube" );
+        Downer.layer = LayerMask.NameToLayer ( "FloorCube" );
 
         int xpos = _nowGridIndex * 2;
         float zpos = 0f;

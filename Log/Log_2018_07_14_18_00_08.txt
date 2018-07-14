@@ -1,0 +1,31 @@
+log system actived!
+NullReferenceException: Object reference not set to an instance of an object
+---------------[ Stack ]---------------
+CPlayerController.CheckDead () (at Assets/Scripts/CPlayerController.cs:384)
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:214)
+
+NullReferenceException: Object reference not set to an instance of an object
+---------------[ Stack ]---------------
+CPlayerController.CheckDead () (at Assets/Scripts/CPlayerController.cs:384)
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:214)
+
+NullReferenceException: Object reference not set to an instance of an object
+---------------[ Stack ]---------------
+CPlayerController.CheckDead () (at Assets/Scripts/CPlayerController.cs:384)
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:214)
+
+NullReferenceException: Object reference not set to an instance of an object
+---------------[ Stack ]---------------
+CPlayerController.CheckDead () (at Assets/Scripts/CPlayerController.cs:384)
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:214)
+
+NullReferenceException: Object reference not set to an instance of an object
+---------------[ Stack ]---------------
+CPlayerController.CheckDead () (at Assets/Scripts/CPlayerController.cs:384)
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:214)
+
+NullReferenceException: Object reference not set to an instance of an object
+---------------[ Stack ]---------------
+CPlayerController.CheckDead () (at Assets/Scripts/CPlayerController.cs:384)
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:214)
+
