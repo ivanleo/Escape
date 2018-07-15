@@ -1,0 +1,18 @@
+log system actived!
+[2018-07-15 22:12:37.984 | Info    ] Jumping
+[2018-07-15 22:12:41.773 | Info    ] Jumping
+[2018-07-15 22:12:44.345 | Info    ] Jumping
+[2018-07-15 22:12:48.037 | Info    ] Jumping
+[2018-07-15 22:12:48.802 | Info    ] Jumping
+[2018-07-15 22:12:50.231 | Info    ] Jumping
+[2018-07-15 22:12:52.731 | Info    ] Jumping
+[2018-07-15 22:12:54.094 | Info    ] Jumping
+[2018-07-15 22:12:55.488 | Info    ] Jumping
+[2018-07-15 22:12:56.805 | Info    ] Jumping
+[2018-07-15 22:12:59.441 | Info    ] Jumping
+[2018-07-15 22:13:01.038 | Info    ] Jumping
+[2018-07-15 22:13:03.547 | Info    ] Jumping
+[2018-07-15 22:13:04.309 | Info    ] Jumping
+[2018-07-15 22:13:05.118 | Info    ] Jumping
+[2018-07-15 22:13:08.343 | Info    ] Jumping
+[2018-07-15 22:13:13.370 | Info    ] Jumping

@@ -1,0 +1,5 @@
+log system actived!
+[2018-07-15 22:12:23.601 | Info    ] Jumping
+[2018-07-15 22:12:26.397 | Info    ] Jumping
+[2018-07-15 22:12:28.300 | Info    ] Jumping
+[2018-07-15 22:12:29.304 | Info    ] Jumping

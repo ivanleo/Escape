@@ -1,0 +1,572 @@
+log system actived!
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+ArgumentException: Input Axis Horzontal2p is not setup.
+ To change the input settings use: Edit -> Project Settings -> Input
+---------------[ Stack ]---------------
+CPlayerController.FixedUpdate () (at Assets/Scripts/CPlayerController.cs:233)
+
+[2018-07-15 22:14:41.044 | Info    ] Jumping
+[2018-07-15 22:14:42.029 | Info    ] Jumping
+[2018-07-15 22:14:42.800 | Info    ] Jumping
+[2018-07-15 22:14:44.596 | Info    ] Jumping
+[2018-07-15 22:14:45.893 | Info    ] Jumping
+[2018-07-15 22:14:47.083 | Info    ] Jumping

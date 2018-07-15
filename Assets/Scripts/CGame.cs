@@ -66,8 +66,10 @@ public class CGame: CSingleton<CGame>
     /// </summary>
     public int StandCount { get; set; }
 
-
-
+    /// <summary>
+    /// 是否危险时刻
+    /// </summary>
+    public bool IsDangerous { get; set; }
 
     /// <summary>
     /// 当前格子序号
@@ -198,8 +200,14 @@ public class CGame: CSingleton<CGame>
                 up.MoveIn();
             }
 
+            yield return new WaitForSeconds ( 0.8f );
+            IsDangerous = true;
+
+            yield return new WaitForSeconds ( 0.8f );
+            IsDangerous = false;
+
             //随机等待一定时间
-            yield return new WaitForSeconds ( CMath.Rand ( minWait, maxWait ) );
+            yield return new WaitForSeconds ( CMath.Rand ( minWait, maxWait ) - 0.6f );
 
             //上方格子震动
             for ( int i = 0 ; i < Root_Upper.childCount ; i++ )
@@ -253,6 +261,9 @@ public class CGame: CSingleton<CGame>
         Upper.layer = LayerMask.NameToLayer ( "UpperCube" );
         Downer.layer = LayerMask.NameToLayer ( "FloorCube" );
 
+        CCube UpperCube = Upper.AddComponent<CCube>();
+        CCube DownerCube = Downer.AddComponent<CCube>();
+
         int xpos = _nowGridIndex * 2;
         float zpos = 0f;
         int ypos;
@@ -263,13 +274,20 @@ public class CGame: CSingleton<CGame>
             //前10个Y轴固定为10
             ypos = 9;
             SafeOffset = 2;
+            UpperCube.IsSafe = true;
         }
         else
         {
             //后面的依照前面的进行偏移
             int offset = CMath.Rand ( -2, 3 );
             ypos = _lastYPos + offset;
-            SafeOffset = ( CheckIsSafe() ? CMath.Rand ( 1, 3 ) : 0 );
+
+            bool isSafe = CheckIsSafe();
+
+            if ( isSafe ) { _lastSafeIndex = _nowGridIndex; }
+
+            UpperCube.IsSafe = isSafe;
+            SafeOffset = isSafe ? CMath.Rand ( 1, 3 ) : 0 ;
         }
 
         _lastYPos = ypos;
@@ -292,8 +310,8 @@ public class CGame: CSingleton<CGame>
         Upper.transform.SetParent ( Root_Upper );
         Downer.transform.SetParent ( Root_Downer );
 
-        Upper.AddComponent<CCube>().SetInfo ( upStartPosY, upTargetPosY );
-        Downer.AddComponent<CCube>().SetInfo ( downStartPosY, downTargetPosY );
+        UpperCube.SetInfo ( upStartPosY, upTargetPosY );
+        DownerCube.SetInfo ( downStartPosY, downTargetPosY );
 
         grid._UpperCube = Upper;
         grid._DownerCube = Downer;

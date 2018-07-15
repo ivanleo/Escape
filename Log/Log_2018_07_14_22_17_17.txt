@@ -1,0 +1,4 @@
+log system actived!
+[2018-07-14 22:17:19.170 | Info    ] Jumping
+[2018-07-14 22:17:23.534 | Info    ] Jumping
+Init 场景切换工具 Successful!

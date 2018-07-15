@@ -1,0 +1,23 @@
+log system actived!
+[2018-07-16 00:17:21.718 | Info    ] Jumping
+[2018-07-16 00:17:24.017 | Info    ] Jumping
+[2018-07-16 00:17:24.020 | Info    ] Jumping
+[2018-07-16 00:17:26.591 | Info    ] Jumping
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController
+Animator is not playing an AnimatorController

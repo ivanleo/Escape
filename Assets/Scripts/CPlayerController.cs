@@ -1,10 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using CoffeeBean;
 using DG.Tweening;
-using System;
-using Cinemachine;
-using CoffeeBean;
+using UnityEngine;
 
 public enum EActionType
 {
@@ -156,6 +152,11 @@ public class CPlayerController : MonoBehaviour
     private EDirection m_Dir = EDirection.FORWARD;
 
     /// <summary>
+    /// 玩家的半身高
+    /// </summary>
+    private float m_HalfPlayerHeight;
+
+    /// <summary>
     /// 是否死亡
     /// </summary>
     public bool IsDead { get; set; }
@@ -184,6 +185,9 @@ public class CPlayerController : MonoBehaviour
 
         m_AT = GetComponentInChildren<Animator>();
         m_Body = GetComponent<Rigidbody>();
+
+        m_HalfPlayerHeight = m_CapCollider.height / 2;
+
 
         //开始X
         if ( transform.position.x > StartX )
@@ -231,6 +235,9 @@ public class CPlayerController : MonoBehaviour
         //处理旋转
         HandlerDirection ( HInput );
 
+        //更新地面状态
+        m_IsOnGround = CheckOnLand();
+
         //处理水平移动和是否在地面的状态修改
         if ( m_IsOnGround )
         {
@@ -241,26 +248,30 @@ public class CPlayerController : MonoBehaviour
             HandlerAirMoving ( HInput );
         }
 
-        if ( m_Body.velocity.x > 9 )
-        {
-            Vector3 temp = m_Body.velocity;
-            temp.x = 9f;
-            m_Body.velocity = temp;
-        }
+        //限制速度
+        LimitVelocity();
 
-        if ( m_Body.velocity.y > 9 )
-        {
-            Vector3 temp = m_Body.velocity;
-            temp.y = 9f;
-            m_Body.velocity = temp;
-        }
+        m_AT.SetFloat ( "YSpeed", m_Body.velocity.y );
+        m_AT.SetBool ( "IsOnGround", m_IsOnGround );
+        m_AT.SetBool ( "IsMove", HInput != 0f );
 
         //检查是否需要创建新的盒子
         //CCubeManager.Instance.CheckCreateGrid ( transform.position.x );
-
-        //Debug.Log ( m_Body.velocity );
     }
 
+    /// <summary>
+    /// 限制速度
+    /// </summary>
+    private void LimitVelocity()
+    {
+        Vector3 temp = m_Body.velocity;
+
+        if ( temp.x > 9 ) { temp.x = 9; }
+
+        if ( temp.x < -9 ) { temp.x = -9; }
+
+        m_Body.velocity = temp;
+    }
 
     /// <summary>
     /// 处理空中移动
@@ -269,32 +280,44 @@ public class CPlayerController : MonoBehaviour
     private void HandlerAirMoving ( float hInput )
     {
         //添加水平力
-        m_Body.AddForce ( Vector3.right * m_MoveForce * 0.3f * hInput );
+        m_Body.AddForce ( Vector3.right * m_MoveForce * hInput );
+    }
 
-        //检查是否落地
-        CheckOnLand();
+    /// <summary>
+    /// 处理地面移动
+    /// </summary>
+    /// <param name="hInput"></param>
+    private void HandlerGroundMoving ( float hInput )
+    {
+        //添加水平力
+        m_Body.AddForce ( Vector3.right * m_MoveForce * hInput );
+
+        if ( m_PlayerID == 1 && Input.GetKeyDown ( KeyCode.W ) ||
+                m_PlayerID == 2 && Input.GetKeyDown ( KeyCode.UpArrow ) )
+        {
+            Jump();
+        }
     }
 
     /// <summary>
     /// 检查是否落地
     /// </summary>
-    private void CheckOnLand()
+    private bool CheckOnLand()
     {
-        float Length = m_Body.velocity.y > 0 ? 0.01f : 0.1f;
-        Ray ry = new Ray ( transform.position, Vector3.down );
+        float Length = 0.1f;
+        Ray ry = new Ray ( transform.position + m_HalfPlayerHeight * Vector3.up, Vector3.down );
+        return Physics.Raycast ( ry, m_HalfPlayerHeight + Length, LayerMask.GetMask ( "FloorCube" ) );
+    }
 
-        RaycastHit ryHit;
-
-        if ( Physics.Raycast ( ry, out ryHit, Length, LayerMask.GetMask ( "FloorCube" ) ) )
-        {
-            m_IsOnGround = true;
-
-            //TODO 播放落地烟尘
-        }
-        else
-        {
-            m_IsOnGround = false;
-        }
+    /// <summary>
+    /// 检查是否碰到了不安全的上方箱子
+    /// </summary>
+    /// <returns></returns>
+    private bool CheckHitUnSafeUpper()
+    {
+        float Length = 0.1f;
+        Ray ry = new Ray ( transform.position + m_HalfPlayerHeight * Vector3.up, Vector3.up );
+        return Physics.Raycast ( ry, m_HalfPlayerHeight + Length, LayerMask.GetMask ( "UpperCube" ) );
     }
 
     /// <summary>
@@ -332,25 +355,9 @@ public class CPlayerController : MonoBehaviour
         {
             m_AT.SetInteger ( "AnimIndex", ( int ) EActionType.NORMAL_STAND );
         }
-
-
     }
 
-    /// <summary>
-    /// 处理地面移动
-    /// </summary>
-    /// <param name="hInput"></param>
-    private void HandlerGroundMoving ( float hInput )
-    {
-        if ( m_PlayerID == 1 && Input.GetKeyDown ( KeyCode.W ) ||
-                m_PlayerID == 2 && Input.GetKeyDown ( KeyCode.UpArrow ) )
-        {
-            Jump();
-        }
 
-        //添加水平力
-        m_Body.AddForce ( Vector3.right * m_MoveForce * hInput  );
-    }
 
     /// <summary>
     /// 跳跃
@@ -360,8 +367,11 @@ public class CPlayerController : MonoBehaviour
         CLOG.I ( "Jumping" );
         CSoundManager.Instance.PlayEffect ( "jump" );
 
-        m_AT.SetInteger ( "AnimIndex", ( int ) EActionType.NORMAL_WIN );
-        m_Body.AddForce ( Vector3.up * m_JumpForce );
+        m_AT.SetInteger ( "AnimIndex", ( int ) EActionType.NORMAL_FLY_UP );
+        Vector3 Temp = m_Body.velocity;
+        Temp.y = 0f;
+        Temp += Vector3.up * m_JumpForce;
+        m_Body.velocity = Temp;
         m_IsOnGround = false;
 
         //CParticleManager.PlaySmoke ( transform.position );
@@ -375,96 +385,41 @@ public class CPlayerController : MonoBehaviour
     /// <returns></returns>
     private bool CheckDead()
     {
+        if ( !CGame.Instance.IsDangerous )
+        {
+            return false;
+        }
 
-        Ray ry = new Ray ( transform.position + m_CapCollider.height * Vector3.up, Vector3.up );
+        Ray ry = new Ray ( transform.position + m_HalfPlayerHeight * Vector3.up, Vector3.up );
         RaycastHit ryHIt;
 
-        if ( Physics.Raycast ( ry, out ryHIt, 0.3f, LayerMask.GetMask ( "UpperCube" ) ) )
+        if ( Physics.Raycast ( ry, out ryHIt, 0.3f + m_HalfPlayerHeight, LayerMask.GetMask ( "UpperCube" ) ) )
         {
-            if ( !ryHIt.transform.GetComponent<CCube>().IsSafe )
+            var cube = ryHIt.transform.GetComponent<CCube>();
+
+            if ( cube.IsSafe )
             {
-                var GameRef = CGame.Instance;
-
-                if ( GameRef.PlayMode == EPlayMode.PLAY_SINGLE )
-                {
-                    GameRef.DeadCount++;
-                    CUI_Relife.CreateUI();
-                }
-                else
-                {
-                    //双人模式下死亡
-                    GameRef.DeadCount++;
-                }
-
-                return true;
+                return false;
             }
+
+            var GameRef = CGame.Instance;
+
+            if ( GameRef.PlayMode == EPlayMode.PLAY_SINGLE )
+            {
+                GameRef.DeadCount++;
+                CUI_Relife.CreateUI();
+            }
+            else
+            {
+                //双人模式下死亡
+                GameRef.DeadCount++;
+            }
+
+            return true;
         }
 
         return false;
     }
-
-    //private void OnCollisionEnter ( Collision collision )
-    //{
-    //    if ( collision.gameObject.layer == 9 && m_IsInAir )
-    //    {
-    //        m_IsInAir = false;
-    //        m_AT.SetInteger ( "AnimIndex", ( int ) EActionType.NORMAL_STAND );
-
-    //        CParticleManager.PlaySmoke ( transform.position );
-    //    }
-    //    else if ( collision.gameObject.layer == 11 )
-    //    {
-    //        Vector3 force1 = UnityEngine.Random.insideUnitSphere.normalized ;
-    //        Vector3 force2 = UnityEngine.Random.insideUnitSphere.normalized;
-    //        force1.y = Mathf.Abs ( force1.y );
-    //        force2.y = Mathf.Abs ( force1.y );
-    //        force1.z = 0f;
-    //        force2.z = 0f;
-
-    //        int force = 300;
-    //        m_Body.AddForce ( force1 * force );
-    //        collision.rigidbody.AddForce ( force2 * force );
-    //    }
-    //}
-
-    //private bool CheckIsInAir()
-    //{
-    //    Ray ry = new Ray ( CheckPoint.position, Vector3.down * 2 );
-
-    //    m_IsInAir =  !Physics.Raycast ( ry, 2f, LayerMask.GetMask ( "Floor" ) );
-
-
-    //}
-
-    //public void ReLife()
-    //{
-    //    CLOG.I ( "5" );
-    //    m_Body.isKinematic = false;
-    //    Jump();
-    //    CGame.Instance.NowDeadCount--;
-    //    GameObject.Find ( "BGSound" ).GetComponent<AudioSource>().DOFade ( 1f, 1f );
-    //    IsDead = false;
-    //    CParticleManager.PlayRelife ( transform.position );
-    //    CSoundManager.Instance.PlayEffect ( "relife" );
-    //}
-
-
-
-    //private void OnTriggerEnter ( Collider other )
-    //{
-    //    if (  other.gameObject.layer == 11 )
-    //    {
-    //        isInDeadArea = true;
-    //    }
-    //}
-
-    //private void OnTriggerExit ( Collider other )
-    //{
-    //    if ( other.gameObject.layer == 11 )
-    //    {
-    //        isInDeadArea = false;
-    //    }
-    //}
 
 
 }
